@@ -1,0 +1,199 @@
+/* 노말라이즈 */
+body,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 라이브러리 */
+.sec {
+  overflow-x: hidden;
+}
+
+.h-950 {
+  height: 950px;
+}
+
+.relative {
+  position: relative;
+}
+
+.con {
+  width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.con > .img_box {
+  position: absolute;
+}
+
+.img_box > img {
+  width: 100%;
+  display: block;
+}
+
+.f_C_C {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 커스텀 */
+
+/* html,
+body {
+  overflow-x: hidden;
+  user-select: none;
+  font-family: "Pretendard";
+} */
+
+/* .sec_1, .sec_3 {
+  width : 100%;
+  height: 950px;
+  background-color: antiquewhite;
+} */
+
+/* 섹션2시작 */
+
+.sec_2 {
+  min-width: 1920px;
+  user-select: none;
+  font-family: "Pretendard";
+  height: 100vh;
+}
+
+.sec_2 .con {
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.sec_2 .section {
+  position: relative;
+  /* overflow: visible; */
+  height: 100vh;
+}
+
+.sec_2 .section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: background-position 600ms ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section.section-1::before {
+  background: url(/Greendays_main_imgs/sec2_natural.png) center 0 / cover
+    no-repeat;
+}
+
+.section.section-2::before {
+  background: url(/Greendays_main_imgs/sec2_cycle.png) center 0 / cover
+    no-repeat;
+}
+
+.section.section-3::before {
+  background: url(/Greendays_main_imgs/sec2_reuse.png) center 0 / cover
+    no-repeat;
+}
+
+.section.section-4::before {
+  background: url(/Greendays_main_imgs/sec2_organic.png) center 0 / cover
+    no-repeat;
+}
+
+.section-1.cropped::before,
+.section-2.cropped::before,
+.section-3.cropped::before,
+.section-4.cropped::before {
+  background-position: center -130px;
+}
+
+/* 텍스트박스 시작*/
+.section .con .txt_box {
+  position: relative;
+  z-index: 1;
+  width: 740px;
+  height: 496px;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  top: 360px;
+  display: flex;
+}
+
+.section .con .txt_box_right {
+  margin-left: auto;
+  margin-right: 150px;
+}
+
+.section .con .txt_box_left {
+  margin-left: 150px;
+}
+
+.section .con .txt_box > div {
+  flex: 1;
+}
+
+/* 텍스트 타이틀 왼쪽 */
+.section .con .txt_box .txt_title_left {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  color: #fff;
+}
+
+.section .con .txt_box .txt_title_left > p {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: -2.45;
+}
+
+/* 텍스트 타이틀 오른쪽 */
+.section .con .txt_box .txt_title_right {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 38px 28px;
+}
+
+.section .con .txt_box .txt_title_right > h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.section .con .txt_box .txt_title_right > span {
+  font-size: 10px;
+  font-weight: 100;
+  margin-left: 10px;
+}
+
+.section .con .txt_box .txt_title_right > p {
+  font-size: 15px;
+  text-align: right;
+  margin-top: 200px;
+  line-height: 1.6;
+  letter-spacing: -2.5;
+  font-weight: 200;
+}
+
+.section .con .txt_box_left .txt_title_right > p {
+  text-align: left;
+}
+
+.section .con .txt_box_2 .txt_title_right > p {
+  margin-top: 180px;
+}
+
+/* 텍스트박스 끝 */
+
+/* 섹션2 끝 */

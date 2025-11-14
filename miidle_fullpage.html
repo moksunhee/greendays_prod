@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greendays</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js"></script>
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+    <!-- 테일윈드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 스와이퍼 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- full page css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css"
+    />
+    <!-- full page js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <!-- full page scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js"></script>
+
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+          format("woff");
+        font-weight: 100;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+          format("woff");
+        font-weight: 200;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+          format("woff");
+        font-weight: 300;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+          format("woff");
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+          format("woff");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+          format("woff");
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+          format("woff");
+        font-weight: 800;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+          format("woff");
+        font-weight: 900;
+        font-display: swap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sec_1"></div>
+
+    <div id="fullpage" class="sec_2 con-min-width">
+      <section class="section section-1">
+        <div class="con">
+          <div class="txt_box txt_box_right txt_box_1">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Nature’s Promise <br />
+                — Protecting <br />
+                Tomorrow
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                우리는 단순히 제품을 만드는 것이 아니라,<br />지구를 지키는
+                선택을 만듭니다. <br />
+                모든 과정은 "자연을 위한" 발걸음으로 설계됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-2">
+        <div class="con">
+          <div class="txt_box txt_box_left txt_box_2">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Nature’s Cycle <br />— Living in <br />
+                Harmony
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                제품의 시작부터 끝까지, <br />
+                순환 가능한 디자인으로 완성합니다. <br />
+                "만들고, 쓰고, 버리는" 구조가 아닌 다시 돌고, <br />이어지는
+                삶의 사이클을 그려갑니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-3">
+        <div class="con">
+          <div class="txt_box txt_box_right txt_box_3">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Reuse Action <br />— Minimizing <br />
+                Waste Daily
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                우리는 버려지는 자원을 다시 쓰는 방법을 <br />
+                고민하고 리필과 재사용 시스템을 통해 쓰레기를 <br />
+                최소화하는 지속가능한 소비 습관을 제안합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-4">
+        <div class="con">
+          <div class="txt_box txt_box_left txt_box_4">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Organic Essence <br />
+                — Respecting <br />
+                Nature’s Power
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                자연이 본래 가진 힘을 존중하는 마음으로 <br />
+                제품에 담았습니다. 피부와 생활에 닿는 모든 순간이 <br />
+                안전하고 건강해야합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sec_3"></div>
+
+    <style>
+      /* 노말라이즈 */
+      body,
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* 라이브러리 */
+      .sec {
+        overflow-x: hidden;
+      }
+
+      .h-950 {
+        height: 950px;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .con {
+        width: 1920px;
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      .con > .img_box {
+        position: absolute;
+      }
+
+      .img_box > img {
+        width: 100%;
+        display: block;
+      }
+
+      .f_C_C {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 커스텀 */
+
+      /* html,
+      body {
+        overflow-x: hidden;
+        user-select: none;
+        font-family: "Pretendard";
+      } */
+
+      /* .sec_1, .sec_3 {
+        width : 100%;
+        height: 950px;
+        background-color: antiquewhite;
+      } */
+
+      /* 섹션2시작 */
+
+      .sec_2 {
+        min-width: 1920px;
+        user-select: none;
+        font-family: "Pretendard";
+      }
+
+      .sec_2 .con {
+        width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      .sec_2 .section {
+        position: relative;
+        /* overflow: visible; */
+      }
+
+      .sec_2 .section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transition: background-position 600ms ease;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .section.section-1::before {
+        background: url(/Greendays_main_imgs/sec2_natural.png) center 0 / cover
+          no-repeat;
+      }
+
+      .section.section-2::before {
+        background: url(/Greendays_main_imgs/sec2_cycle.png) center 0 / cover
+          no-repeat;
+      }
+
+      .section.section-3::before {
+        background: url(/Greendays_main_imgs/sec2_reuse.png) center 0 / cover
+          no-repeat;
+      }
+
+      .section.section-4::before {
+        background: url(/Greendays_main_imgs/sec2_organic.png) center 0 / cover
+          no-repeat;
+      }
+
+      .section-1.cropped::before,
+      .section-2.cropped::before,
+      .section-3.cropped::before,
+      .section-4.cropped::before {
+        background-position: center -130px;
+      }
+
+      /* 텍스트박스 시작*/
+      .section .con .txt_box {
+        position: relative;
+        z-index: 1;
+        width: 740px;
+        height: 496px;
+        border-radius: 10px;
+        border: 5px solid #fff;
+        top: 360px;
+        display: flex;
+      }
+
+      .section .con .txt_box_right {
+        margin-left: auto;
+        margin-right: 150px;
+      }
+
+      .section .con .txt_box_left {
+        margin-left: 150px;
+      }
+
+      .section .con .txt_box > div {
+        flex: 1;
+      }
+
+      /* 텍스트 타이틀 왼쪽 */
+      .section .con .txt_box .txt_title_left {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        color: #fff;
+      }
+
+      .section .con .txt_box .txt_title_left > p {
+        padding: 20px;
+        font-size: 24px;
+        font-weight: 200;
+        line-height: -2.45;
+      }
+
+      /* 텍스트 타이틀 오른쪽 */
+      .section .con .txt_box .txt_title_right {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 38px 28px;
+      }
+
+      .section .con .txt_box .txt_title_right > h2 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .section .con .txt_box .txt_title_right > span {
+        font-size: 10px;
+        font-weight: 100;
+        margin-left: 10px;
+      }
+
+      .section .con .txt_box .txt_title_right > p {
+        font-size: 15px;
+        text-align: right;
+        margin-top: 200px;
+        line-height: 1.6;
+        letter-spacing: -2.5;
+        font-weight: 200;
+      }
+
+      .section .con .txt_box_left .txt_title_right > p {
+        text-align: left;
+      }
+
+      .section .con .txt_box_2 .txt_title_right > p {
+        margin-top: 180px;
+      }
+
+      /* 텍스트박스 끝 */
+
+      /* 섹션2 끝 */
+    </style>
+
+    <script>
+      $(function () {
+        FullPage__init();
+      });
+
+      function FullPage__init() {
+        let firstLoad = true;
+        const sections = document.querySelectorAll("#fullpage .section");
+
+        new fullpage("#fullpage", {
+          scrollOverflow: true,
+          verticalCentered: false,
+
+          afterLoad(origin, destination, direction) {
+            const idx = destination.index;
+            const el = sections[idx];
+
+            if (idx === 0 && firstLoad) {
+              firstLoad = false;
+            } else {
+              el.classList.add("cropped");
+            }
+          },
+
+          onLeave(origin, destination, direction) {
+            const idx = origin.index;
+            const el = sections[idx];
+            el.classList.remove("cropped");
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

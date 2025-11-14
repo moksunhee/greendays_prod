@@ -1,0 +1,3168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greendays_main</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+    <!-- 테일윈드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 스와이퍼 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- full page css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css"
+    />
+    <!-- full page js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <!-- full page scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat:wght@400..700&family=Itim&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Baloo+2:wght@400..800&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat:wght@400..700&family=Itim&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+          format("woff");
+        font-weight: 100;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Sweet";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Light.woff2")
+          format("woff2");
+        font-weight: 300;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "GyeonggiMillenniumTitle";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Light.woff")
+          format("woff");
+        font-weight: 300;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JalpulrineunHaruche";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Haru.woff")
+          format("woff");
+        font-weight: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Linux Biolinum";
+        src: url("/font/LinBiolinum_R.ttf") format("ttf");
+      }
+
+      @font-face {
+        font-family: "SandollSamlipHobbangBasic";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Basic.woff")
+          format("woff");
+        font-weight: normal;
+        font-display: swap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="con">
+        <div class="logo_wrap">
+          <a href="#" class="img_box">
+            <img src="Greendays_main_imgs/haeder_logo.png" alt="" />
+          </a>
+        </div>
+        <nav class="menu_box">
+          <ul>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">RETURN</a></li>
+            <li><a href="#">BRAND</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="menu_icon_box">
+          <a href="#" class="img_box">
+            <img src="Greendays_main_imgs/header_hamburger.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="sec_1">
+      <div class="swiper mySwiper_1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide_1">
+            <div class="txt_box">
+              <h3>All day <br />Greendays</h3>
+              <p>
+                From the small containers we use every day,
+                <br />
+                we begin a greater change.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide slide_2">
+            <div class="txt_box">
+              <h3>Re:Earth</h3>
+              <p>
+                We rethink, reduce, and return our
+                <br />
+                gratitude to the planet that sustains us.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide slide_3">
+            <div class="txt_box">
+              <h3>
+                From Nature,
+                <br />
+                With Love
+              </h3>
+              <p>
+                Gentle care that starts
+                <br />
+                from the earth and embraces your natural beauty.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="banner_bottom img_box">
+        <div class="txt_box">
+          <h3>All day <br />Greendays</h3>
+          <p>
+            From the small containers we use every day,
+            <br />
+            we begin a greater change.
+          </p>
+        </div>
+        <img src="Greendays_main_imgs/sec1_banner_bottom.png" alt="" />
+      </div>
+    </section>
+
+    <div id="fullpage" class="sec_2 con-min-width">
+      <section class="section section-1">
+        <div class="con">
+          <div class="txt_box txt_box_right txt_box_1">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Nature’s Promise <br />
+                — Protecting <br />
+                Tomorrow
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                우리는 단순히 제품을 만드는 것이 아니라,<br />지구를 지키는
+                선택을 만듭니다. <br />
+                모든 과정은 "자연을 위한" 발걸음으로 설계됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-2">
+        <div class="con">
+          <div class="txt_box txt_box_left txt_box_2">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Nature’s Cycle <br />— Living in <br />
+                Harmony
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                제품의 시작부터 끝까지, <br />
+                순환 가능한 디자인으로 완성합니다. <br />
+                "만들고, 쓰고, 버리는" 구조가 아닌 다시 돌고, <br />이어지는
+                삶의 사이클을 그려갑니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-3">
+        <div class="con">
+          <div class="txt_box txt_box_right txt_box_3">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Reuse Action <br />— Minimizing <br />
+                Waste Daily
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                우리는 버려지는 자원을 다시 쓰는 방법을 <br />
+                고민하고 리필과 재사용 시스템을 통해 쓰레기를 <br />
+                최소화하는 지속가능한 소비 습관을 제안합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-4">
+        <div class="con">
+          <div class="txt_box txt_box_left txt_box_4">
+            <div class="txt_title_left">
+              <p>
+                Life is not <br />
+                about finding <br />
+                ____ yourself
+              </p>
+            </div>
+            <div class="txt_title_right">
+              <h2>
+                Organic Essence <br />
+                — Respecting <br />
+                Nature’s Power
+              </h2>
+              <span>Life is not &nbsp; &nbsp; about &nbsp; &nbsp; finding</span>
+              <p>
+                자연이 본래 가진 힘을 존중하는 마음으로 <br />
+                제품에 담았습니다. 피부와 생활에 닿는 모든 순간이 <br />
+                안전하고 건강해야합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="sec_3">
+      <div class="img_box">
+        <img src="Greendays_main_imgs/sec_3_tree.png" alt="" />
+      </div>
+      <div class="line img_box">
+        <img src="Greendays_main_imgs/sec_3-4_line.png" alt="" />
+      </div>
+    </section>
+
+    <section class="sec_4">
+      <div class="con">
+        <!-- 텍스트 -->
+        <div
+          class="brand_service_box service_1 active-on-visible"
+          data-active-on-visible-diff-y="100"
+        >
+          <div class="number img_box">
+            <img src="Greendays_main_imgs/sec_4_num-1.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>Eco-friendly raw materials</span>
+            <div>
+              <h3>친환경 원료</h3>
+              <h5>로 제품 생산</h5>
+            </div>
+            <p>
+              자연에서 얻은 순한 원료로 건강한 제품을 만들어
+              <br />
+              모두가 안심하고 사용할 수 있는 제품을 만들어갑니다.
+            </p>
+          </div>
+        </div>
+        <div
+          class="brand_service_box service_2 active-on-visible"
+          data-active-on-visible-diff-y="100"
+        >
+          <div class="number img_box">
+            <img src="Greendays_main_imgs/sec_4_num-2.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>production & return</span>
+            <div>
+              <h3>재사용 용기</h3>
+              <h5>로 제품 생산 +</h5>
+              <h3>용기수거</h3>
+            </div>
+            <p>
+              재사용 가능한 용기로 제품을 생산합니다.
+              <br />
+              사용 후에는 회수하여 세척해 다시 순환의 가치를 이어갑니다.
+            </p>
+          </div>
+        </div>
+        <div
+          class="brand_service_box service_3 active-on-visible"
+          data-active-on-visible-diff-y="100"
+        >
+          <div class="number img_box">
+            <img src="Greendays_main_imgs/sec_4_num-3.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>Refill & Reuse</span>
+            <div>
+              <h3>리필 패키지&nbsp;</h3>
+              <h5>판매</h5>
+            </div>
+            <p>
+              기존 용기를 재사용할 수 있도록 도와주며, 불필요한 폐기물을
+              <br />
+              줄이는데 기여합니다. 작은 습관이 모여 더 큰 변화를 만듭니다.
+            </p>
+          </div>
+        </div>
+        <div
+          class="brand_service_box service_4 active-on-visible"
+          data-active-on-visible-diff-y="100"
+        >
+          <div class="number img_box">
+            <img src="Greendays_main_imgs/sec_4_num-4.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>Subscription delivery</span>
+            <div>
+              <h3>일반배송</h3>
+              <h5>&nbsp;&&nbsp;</h5>
+              <h3>정기배송</h3>
+            </div>
+            <p>
+              편리한 정기 배송과 회수 시스템으로
+              <br />
+              제로 웨이스트를 일상에 스며들게 하며,
+              <br />
+              지속 가능성과 편리함, 두 가지를 모두 책임지겠습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- 이미지 -->
+        <div class="brand_serv_img brand_serv_img-1 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic1.png"
+            alt="브랜드소개이미지"
+          />
+        </div>
+        <div class="brand_serv_img brand_serv_img-2 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic2.png"
+            alt="브랜드소개이미지"
+          />
+        </div>
+        <div class="brand_serv_img brand_serv_img-3 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic3.png"
+            alt="브랜드소개이미지"
+          />
+        </div>
+        <div class="brand_serv_img brand_serv_img-4 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic4.png"
+            alt="브랜드소개이미지"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="sec_5">
+      <div class="img_box">
+        <img src="Greendays_main_imgs/sec_5_logo.png" alt="" />
+      </div>
+    </section>
+
+    <div class="sec sec_6">
+      <div class="con">
+        <div class="top_title">
+          <h3>
+            지구를 지키는 용기<br />함께 만들어가는 우리의 내일<br />실천해요
+            제로웨이스트!
+          </h3>
+        </div>
+
+        <div class="img_box">
+          <img
+            src="/Greendays_main_imgs/sec6_rotate.png"
+            alt=""
+            class="rotate"
+          />
+        </div>
+
+        <!-- best-box -->
+        <div class="best_box">
+          <!-- hair 상품 -->
+          <div class="pr_box pr_box_1 tab-content active flex" id="hair">
+            <div class="pr pr_1">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_shampoo_grapefruit.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SHAMPOO</p>
+                <div class="pr_name_box">
+                  <p>[1000ml]</p>
+                  <p>핑크브리즈 자몽 | GrapeFruit</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">38,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_2">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_shampoo_olive.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SHAMPOO</p>
+                <div class="pr_name_box">
+                  <p>[1000ml]</p>
+                  <p>네이쳐스 올리브 | Olive</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">38,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_3">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_shampoo_lilac.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SHAMPOO</p>
+                <div class="pr_name_box">
+                  <p>[1000ml]</p>
+                  <p>스위트 포도 | Grape</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">38,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_4">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_shampoo_lemon.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SHAMPOO</p>
+                <div class="pr_name_box">
+                  <p>[1000ml]</p>
+                  <p>시트러스 레몬 | lemon</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">38,000원</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- skinbody 상품 -->
+          <div class="pr_box pr_box_2 tab-content flex" id="skinbody">
+            <div class="pr pr_1">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_toner.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>TONER</p>
+                <div class="pr_name_box">
+                  <p>[250ml]</p>
+                  <p>오션 모이스쳐 | Moisture</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">32,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_2">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_lotion.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>LOTION</p>
+                <div class="pr_name_box">
+                  <p>[250ml]</p>
+                  <p>오션 모이스쳐 | Moisture</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">32,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_3">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_cream.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>CREAM</p>
+                <div class="pr_name_box">
+                  <p>[50ml]</p>
+                  <p>오션 모이스쳐 | Moisture</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">27,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_4">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_body-lotion.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>BODY LOTION</p>
+                <div class="pr_name_box">
+                  <p>[500ml]</p>
+                  <p>화이트 블렌드 | White Musk</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">36,000원</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- laudry 상품 -->
+          <div class="pr_box pr_box_3 tab-content flex" id="laundry">
+            <div class="pr pr_1">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_peach.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>피치 프레시 | Peach</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_2">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_cotton.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>코튼퓨어 | Cotton</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_3">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_lilac.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <span>[2000ml]</span>
+                  <p>라일락 가든 | Lilac</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_4">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_whitemusk.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>화이트 블렌드 | White Musk</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- soap 상품 -->
+          <div class="pr_box pr_box_4 tab-content flex" id="soap">
+            <div class="pr pr_1">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_soap_grapefruit.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SOAP</p>
+                <div class="pr_name_box">
+                  <p>[130g]</p>
+                  <p>핑크브리즈 자몽 | GrapeFruit</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">18,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_2">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_soap_olive.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SOAP</p>
+                <div class="pr_name_box">
+                  <p>[130g]</p>
+                  <p>네이쳐스 올리브 | Olive</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">18,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_3">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_soap_grape.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SOAP</p>
+                <div class="pr_name_box">
+                  <p>[130g]</p>
+                  <p>스위트 포도 | Grape</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">18,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_4">
+              <div class="best">BEST</div>
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_soap_lemon.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SOAP</p>
+                <div class="pr_name_box">
+                  <p>[130g]</p>
+                  <p>시트러스 레몬 | lemon</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">18,000원</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- airfreshener 상품 -->
+          <div class="pr_box pr_box_5 tab-content flex" id="airfreshener">
+            <div class="pr pr_1">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_air_cotton.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>AIR FRESHENER</p>
+                <div class="pr_name_box">
+                  <p>[300g]</p>
+                  <p>코튼퓨어 | Cotton</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">22,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_2">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_air_peach.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>AIR FRESHENER</p>
+                <div class="pr_name_box">
+                  <p>[300g]</p>
+                  <p>피치 프레시 | Peach</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">22,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_3">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img src="Greendays_main_imgs/sec6_air_lemon.png" alt="" />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>AIR FRESHENER</p>
+                <div class="pr_name_box">
+                  <p>[300g]</p>
+                  <p>시트러스 레몬 | lemon</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">22,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_4">
+              <div class="best">BEST</div>
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_air_whitemusk.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>AIR FRESHENER</p>
+                <div class="pr_name_box">
+                  <p>[300g]</p>
+                  <p>화이트 블렌드 | White Musk</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">22,000원</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- refill 상품 -->
+          <div class="pr_box pr_box_6 tab-content flex" id="refill">
+            <div class="pr pr_1">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_refill_2000_peach.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT-REFILL</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>피치 프레시 | Peach</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">32,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_2">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_refill_1000_cotton.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT-REFILL</p>
+                <div class="pr_name_box">
+                  <p>[1000ml]</p>
+                  <p>코튼퓨어 | Cotton</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">16,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_3">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_refill_2000_lemon.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SHAMPOO-REFILL</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>시트러스 레몬 | lemon</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">32,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_4">
+              <div class="best">BEST</div>
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_refill_1000_grapefruit.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>SHAMPOO-REFILL</p>
+                <div class="pr_name_box">
+                  <p>[1000ml]</p>
+                  <p>핑크브리즈 자몽 | GrapeFruit</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">16,000원</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="txt_box">
+            <div class="top_txt">
+              <h3>
+                From Nature <br />
+                Soap Best Sellers
+              </h3>
+              <p>자연에서 온, 그린하루가 완성한 베스트 상품</p>
+            </div>
+
+            <div class="tab_box">
+              <button class="tab_list active" data-tab="hair">Hair Care</button>
+              <button class="tab_list" data-tab="skinbody">Skin & Body</button>
+              <button class="tab_list" data-tab="laundry">Laundry</button>
+              <button class="tab_list" data-tab="soap">Soap</button>
+              <button class="tab_list" data-tab="airfreshener">
+                Air Freshener
+              </button>
+              <button class="tab_list" data-tab="refill">Refill</button>
+            </div>
+
+            <div class="btm_txt">
+              <!-- hair 텍스트 -->
+              <div class="txt tab-content active" id="hair-txt">
+                <p>
+                  식물 유래 성분이 모발에 생기를 불어넣고 두피를 편안하게
+                  합니다.
+                  <br />
+                  당신의 일상적인 케어가 곧 지구를 위한 실천이 됩니다.
+                  <br />
+                  환경까지 생각한 친환경 샴푸 & 린스를 경험하세요.
+                </p>
+              </div>
+
+              <!-- skinbody 텍스트 -->
+              <div class="txt tab-content" id="skinbody-txt">
+                <p>
+                  자연이 전하는 수분 에너지가 피부를 부드럽고 건강하게
+                  지켜줍니다.
+                  <br />
+                  당신의 피부에 닿는 촉촉한 케어가 곧 지구에 닿는 배려가 됩니다.
+                  <br />
+                  오늘부터 지구와 함께하는 모이스처 스킨케어를 시작하세요.
+                </p>
+              </div>
+
+              <!-- laundry 텍스트 -->
+              <div class="txt tab-content" id="laundry-txt">
+                <p>
+                  강한 세정력은 그대로 지키면서, 불필요한 화학 성분은
+                  덜어냈습니다.
+                  <br />
+                  작은 세탁 습관의 변화가 지구와 우리의 내일을 바꿉니다.
+                  <br />
+                  오늘부터 더 맑고 지속 가능한 세탁을 선택해보세요.
+                </p>
+              </div>
+
+              <!-- soap 텍스트 -->
+              <div class="txt tab-content" id="soap-txt">
+                <p>
+                  자연의 정직함을 담아, 피부와 지구 모두를 위한 세정을 완성
+                  합니다.
+                  <br />
+                  당신의 일상이 더 가벼워지는 순간,
+                  <br />
+                  지속가능한 아름다움을 비누 한 조각에 담았습니다.
+                </p>
+              </div>
+
+              <!-- airfreshener 텍스트 -->
+              <div class="txt tab-content" id="airfreshener-txt">
+                <p>
+                  인위적이지 않은 향이 부드럽게 스며들어 공간을 새롭게 만듭니다.
+                  <br />
+                  작은 향기의 변화가 하루의 기분과 지구의 공기를 함께 바꿉니다.
+                  <br />
+                  자연 그대로의 향을 담은 친환경 방향제를 만나보세요.
+                </p>
+              </div>
+
+              <!-- refill 텍스트 -->
+              <div class="txt tab-content" id="refill-txt">
+                <p>
+                  한 번 쓰고 버려지는 용기 대신 다시 채우는 즐거움.
+                  <br />
+                  리필은 일상 속 가장 간단한 제로웨이스트 실천입니다.
+                  <br />
+                  모든 제품을 위한 친환경 리필팩으로 새로운 순환을 이어가세요.
+                </p>
+              </div>
+
+              <a href="#" class="arrow more">
+                <span>View More</span>
+                <span class="arrow_line"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="all_box">
+          <div class="all flex">
+            <p class="txt">ALL</p>
+
+            <a href="#" class="arrow">
+              <span>View More</span>
+              <span class="arrow_line"></span>
+            </a>
+          </div>
+
+          <div class="pr_box flex">
+            <div class="pr pr_1">
+              <div class="best">NEW</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_peach.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>피치 프레시 | Peach</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_2">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_cotton.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>코튼퓨어 | Cotton</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_3">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_lilac.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>라일락 가든 | Lilac</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+
+            <div class="pr pr_4">
+              <div class="best">BEST</div>
+
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="/Greendays_main_imgs/sec6_detergent_whitemusk.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <div class="pr_txt">
+                <p>DETERGENT</p>
+                <div class="pr_name_box">
+                  <span>[2000ml]</span>
+                  <p>화이트 블렌드 | White Musk</p>
+                </div>
+                <div class="line"></div>
+                <p class="pr_price">40,000원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="sec_7">
+      <div class="con">
+        <div class="txt_box">
+          <h2>
+            Our Daily,
+            <br />
+            Your Pure Review
+          </h2>
+          <h3>우리의 일상, 고객의 따뜻한 리뷰</h3>
+          <p>
+            환경을 생각하는 한 분 한분의 소중한 이야기를 완성합니다.
+            <br />
+            직접 경험한 고객님들의 진짜 후기를 확인해보세요.
+          </p>
+          <a href="#">
+            <span>View More</span>
+            <span class="arrow_line"></span>
+          </a>
+        </div>
+
+        <div class="img_box"></div>
+
+        <div class="review_box">
+          <div class="review_wrap review_wrap_1">
+            <div class="review review_1">
+              <div class="review_txt_box">
+                <h3>Air Freshener</h3>
+                <p>
+                  작은 공간에도 은은하게 향이 퍼져요.
+                  <br />
+                  인공적인 향이 아니라 편안하고 자연스럽
+                  <br />
+                  게 오래가서 교체 주기도 길어 만족해요.
+                </p>
+                <div class="personal_box">
+                  <span class="name">채찌</span>
+                  <div class="img_box"></div>
+                  <span class="date">25.04.29</span>
+                </div>
+              </div>
+              <a href="#">
+                View More
+                <div class="arrow_line"></div>
+              </a>
+            </div>
+            <div class="review review_2">
+              <div class="review_txt_box">
+                <h3>Soap</h3>
+                <p>
+                  거품이 풍성한데도 피부가 건조하지 않고
+                  <br />
+                  사용 후 촉촉함이 오래 남아 편안해요.
+                  <br />
+                  자연스러운 향이라 매일 쓰기 좋아요.
+                  <br />
+                  세정력도 좋고 순해서 좋아요.
+                </p>
+                <div class="personal_box">
+                  <span class="name">봄봄</span>
+                  <div class="img_box"></div>
+                  <span class="date">25.09.07</span>
+                </div>
+              </div>
+              <a href="#">
+                View More
+                <div class="arrow_line"></div>
+              </a>
+            </div>
+          </div>
+          <div class="review_wrap review_wrap_2">
+            <div class="review review_3">
+              <div class="review_txt_box">
+                <h3>Body Lotion</h3>
+                <p>
+                  피부가 건조할 틈 없이 보습이 채워져요.
+                  <br />
+                  끈적임 없이 산뜻하게 마무리 돼서 매일
+                  <br />
+                  사용해도 부담 없는 바디로션이에요.
+                  <br />
+                  가족 모두 함께 사용하기 좋아요👍
+                </p>
+                <div class="personal_box">
+                  <span class="name">김꼬미</span>
+                  <div class="img_box"></div>
+                  <span class="date">25.07.01</span>
+                </div>
+              </div>
+              <a href="#">
+                View More
+                <div class="arrow_line"></div>
+              </a>
+            </div>
+            <div class="review review_4">
+              <div class="review_txt_box">
+                <h3>Dish Soap</h3>
+                <p>
+                  세정력이 뛰어나 기름때도 쉽게 지워져요.
+                  <br />
+                  손이 건조하지 않아 설거지가 편하고
+                  <br />
+                  향이 은은해서 사용 후 기분이 좋아요.
+                  <br />
+                  아이 식기 세정에도 안심하고 사용할 수
+                  <br />
+                  있어요
+                </p>
+                <div class="personal_box">
+                  <span class="name">크림맘</span>
+                  <div class="img_box"></div>
+                  <span class="date">25.03.16</span>
+                </div>
+              </div>
+              <a href="#">
+                View More
+                <div class="arrow_line"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ele img_box">
+        <img src="Greendays_main_imgs/sec_7_element.png" alt="" />
+      </div>
+    </section>
+
+    <section class="sec_8">
+      <div class="panels">
+        <div class="panels__container">
+          <a href="#" class="panel panel_1">
+            <div class="panel__content">
+              <div class="panel__title panel__title_1">
+                <div class="arrow_line"></div>
+                <h3>Brand</h3>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="panel panel_2">
+            <div class="panel__content">
+              <div class="panel__title panel__title_2">
+                <h3>Shop</h3>
+                <div class="arrow_line"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec_9">
+      <div class="ele img_box">
+        <img src="Greendays_main_imgs/sec_9_element.png" alt="" />
+      </div>
+
+      <div class="sns_txt_box">
+        <div class="icon_box">
+          <img src="Greendays_main_imgs/sec_9_instagram-icon.png" alt="" />
+        </div>
+        <div class="txt_box">
+          <h3>
+            인스타그램에서 다양한
+            <br />
+            소식을 만나보세요
+          </h3>
+        </div>
+        <div class="divider"></div>
+        <div class="insta_id">
+          <p>@greendays</p>
+        </div>
+      </div>
+
+      <div class="swiper mySwiper_9 sns_img_box">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide img_box">
+            <img src="Greendays_main_imgs/sec_9_sns_img-1.png" alt="" />
+          </div>
+          <div class="swiper-slide img_box">
+            <img src="Greendays_main_imgs/sec_9_sns_img-2.png" alt="" />
+          </div>
+          <div class="swiper-slide img_box">
+            <img src="Greendays_main_imgs/sec_9_sns_img-3.png" alt="" />
+          </div>
+          <div class="swiper-slide img_box">
+            <img src="Greendays_main_imgs/sec_9_sns_img-4.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <footer class="con-min-width">
+      <div class="con">
+        <div class="main_box">
+          <div class="CC_box">
+            <p>Customer Center</p>
+            <p>1600-3908</p>
+            <p>Mon-Fri 10:00 - 18:00</p>
+          </div>
+
+          <div class="menu_box">
+            <div class="line"></div>
+            <ul>
+              <li>
+                <a href="#">Products</a>
+                <ul>
+                  <li><a href="#">전체상품</a></li>
+                  <li><a href="#">베스트 상품</a></li>
+                  <li><a href="#">정기구독</a></li>
+                  <li><a href="#">제품리뷰</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Service</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">자주 묻는 질문</a></li>
+                  <li><a href="#">상품문의</a></li>
+                  <li><a href="#">상품후기</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">My Greendays</a>
+                <ul>
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">주문조회</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Social</a>
+                <ul>
+                  <li><a href="#">인스타그램</a></li>
+                  <li><a href="#">유튜브</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="logo_box">
+          <h3>GREENDAYS</h3>
+        </div>
+      </div>
+
+      <div class="img_box">
+        <img src="Greendays_main_imgs/ft_rotate.png" alt="" />
+      </div>
+    </footer>
+
+    <style>
+      /* 노말라이즈 */
+      body,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* 라이브러리 */
+
+      .con {
+        width: 1680px;
+        margin: 0 auto;
+      }
+
+      .con-min-width {
+        min-width: 1680px;
+      }
+
+      .img_box > img {
+        display: block;
+        width: 100%;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      /* 커스텀 */
+
+      body {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      /* 헤더 시작 */
+
+      header {
+        font-family: "Baloo 2", sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        width: 100%;
+        height: 90px;
+        transition: backdrop-filter 0.3s;
+      }
+
+      header:hover {
+        backdrop-filter: blur(10px);
+      }
+
+      header .con {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      header .con .logo_wrap {
+        width: 200px;
+      }
+
+      header .menu_box {
+        display: flex;
+        align-items: center;
+      }
+
+      header .menu_box > ul {
+        width: 850px;
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.7);
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 430px;
+      }
+
+      header .menu_box > ul > li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      header .menu_box > ul > li:hover {
+        color: #fff;
+      }
+
+      header .con .menu_icon_box .img_box img {
+        width: 22px;
+      }
+      /* 헤더 끝 */
+
+      /* 섹션1 시작 */
+      .sec_1 {
+        font-family: "Pretendard";
+      }
+
+      /* 배너 슬라이드 */
+
+      .sec_1 .swiper .swiper-slide {
+        width: 100%;
+        height: 950px;
+      }
+
+      .sec_1 .swiper .slide_1 {
+        background: url(/Greendays_main_imgs/sec_1_banner-1.png) no-repeat
+          center / cover;
+      }
+
+      .sec_1 .swiper .slide_2 {
+        background: url(/Greendays_main_imgs/sec_1_banner-2.png) no-repeat
+          center / cover;
+      }
+
+      .sec_1 .swiper .slide_3 {
+        background: url(/Greendays_main_imgs/sec_1_banner-3.jpg) no-repeat
+          center / cover;
+      }
+
+      /* 슬라이드-공통속성 */
+
+      .sec_1 .swiper .swiper-slide .txt_box h3 {
+        font-size: 90px;
+        font-weight: bold;
+        line-height: 100px;
+      }
+
+      .sec_1 .swiper .swiper-slide .txt_box p {
+        margin-top: 40px;
+        font-size: 30px;
+      }
+
+      /* 슬라이드-개별속성 */
+
+      .sec_1 .swiper .slide_1 .txt_box {
+        text-align: right;
+        color: #fff;
+        margin-right: 120px;
+        margin-top: 280px;
+      }
+
+      .sec_1 .swiper .slide_2 .txt_box {
+        color: #fff;
+        margin-left: 120px;
+        margin-top: 320px;
+      }
+
+      .sec_1 .swiper .slide_3 .txt_box {
+        text-align: right;
+        color: #fff1e0;
+        margin-right: 120px;
+        margin-top: 280px;
+      }
+
+      .sec_1 .swiper .swiper-button-next,
+      .sec_1 .swiper .swiper-button-prev {
+        color: rgb(255, 243, 216);
+      }
+
+      /* 배너 하단 이미지 */
+
+      .sec_1 .banner_bottom {
+        position: relative;
+        height: 820px;
+      }
+
+      .sec_1 .banner_bottom .txt_box {
+        position: absolute;
+        top: 240px;
+        left: 120px;
+        z-index: 20;
+        color: #fff;
+      }
+
+      .sec_1 .banner_bottom .txt_box h3 {
+        font-size: 90px;
+        font-weight: bold;
+        line-height: 100px;
+      }
+
+      .sec_1 .banner_bottom .txt_box p {
+        margin-top: 40px;
+        font-size: 30px;
+      }
+
+      .sec_1 .banner_bottom img {
+        position: absolute;
+        top: -250px;
+        left: 0;
+        white-space: wrap;
+        z-index: 10;
+      }
+
+      /* 섹션1 끝 */
+
+      /* 섹션2 시작 */
+
+      /* 섹션2 끝 */
+
+      /* 섹션3 시작 */
+      .sec_3 {
+        margin-top: 300vh;
+        position: relative;
+      }
+
+      .sec_3 .line {
+        position: absolute;
+        top: 90px;
+        left: 0;
+      }
+
+      /* 섹션3 끝 */
+
+      /* 섹션4 시작 */
+
+      .sec_4 {
+        width: 100%;
+        height: 3060px;
+        background: url(/Greendays_main_imgs/sec_4_BG.png) no-repeat center /
+          cover;
+      }
+
+      /* 브랜드 소개 텍스트 공통 설정 */
+
+      .sec_4 .con {
+        position: relative;
+      }
+
+      .sec_4 .brand_service_box {
+        display: flex;
+        align-items: center;
+        transition: transform 1s, opacity 1s;
+        opacity: 0;
+      }
+
+      .sec_4 .brand_service_box:nth-child(2n) {
+        justify-content: flex-end;
+        text-align: right;
+      }
+
+      .sec_4 .brand_service_box:nth-child(1) {
+        padding-top: 280px;
+        transform: translateX(-100%);
+      }
+      .sec_4 .brand_service_box:nth-child(2) {
+        margin-top: 380px;
+        transform: translateX(100%);
+      }
+      .sec_4 .brand_service_box:nth-child(3) {
+        margin-top: 430px;
+        transform: translateX(-100%);
+      }
+      .sec_4 .brand_service_box:nth-child(4) {
+        margin-top: 450px;
+        transform: translateX(100%);
+      }
+
+      .sec_4 .brand_service_box.active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      .sec_4 .brand_service_box .number {
+        width: 45px;
+        margin-right: 10px;
+        margin-top: -30px;
+      }
+
+      .sec_4 .brand_service_box:nth-child(4) .number {
+        margin-top: -50px;
+      }
+
+      .sec_4 .brand_service_box .txt_box span {
+        font-family: "Linux Biolinum";
+        font-size: 24px;
+        color: #20522a;
+      }
+
+      .sec_4 .brand_service_box .txt_box div {
+        font-family: "JalpulrineunHaruche";
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .sec_4 .brand_service_box .txt_box div h3 {
+        color: #573b14;
+        font-size: 50px;
+      }
+
+      .sec_4 .brand_service_box .txt_box div h5 {
+        color: #535353;
+        font-size: 32px;
+        margin-top: 10px;
+      }
+
+      .sec_4 .brand_service_box .txt_box p {
+        font-family: "GyeonggiMillenniumTitle";
+        font-size: 20px;
+        font-weight: 300;
+        color: #656060;
+        letter-spacing: -1.1px;
+      }
+
+      /* 브랜드 소개 이미지 설정 */
+
+      .sec_4 .brand_serv_img {
+        position: absolute;
+      }
+
+      .sec_4 .brand_serv_img-1 {
+        width: 914px;
+        right: -200px;
+        top: 20px;
+      }
+
+      .sec_4 .brand_serv_img-2 {
+        width: 900px;
+        left: -350px;
+        top: 600px;
+      }
+
+      .sec_4 .brand_serv_img-3 {
+        width: 753px;
+        right: -200px;
+        top: 1300px;
+      }
+
+      .sec_4 .brand_serv_img-4 {
+        width: 1000px;
+        left: -300px;
+        top: 1850px;
+      }
+
+      /* 섹션4 끝 */
+
+      /* 섹션5 시작 */
+
+      .sec_5 {
+        width: 100%;
+        height: 730px;
+        background: url(/Greendays_main_imgs/sec_5_BG.png) no-repeat center /
+          cover;
+        position: relative;
+      }
+
+      .sec_5 .img_box {
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* 섹션5 끝 */
+
+      /* 섹션6 시작 */
+
+      .sec_6 {
+        font-family: "Pretendard", sans-serif;
+        overflow: hidden;
+        height: 2300px;
+        background: url(/Greendays_main_imgs/main_product_background_photo2.png);
+        position: relative;
+        /* min-width: 1080px; */
+      }
+
+      .sec_6 .con {
+        height: 100%;
+        width: 1560px;
+      }
+
+      .sec_6 .top_title {
+        font-family: "SandollSamlipHobbangBasic";
+        font-size: 55px;
+        color: #8c8c92;
+        line-height: 75px;
+      }
+
+      .sec_6 .top_title h3 {
+        margin: 94px 0 106px 0;
+      }
+
+      .sec_6 .con .img_box .rotate {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        top: 850px;
+        left: auto;
+        right: -65px;
+        z-index: 0;
+      }
+
+      /* 베스트 박스에서 상품박스 */
+
+      .sec_6 .best_box {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .sec_6 .best_box .pr_box {
+        flex-wrap: wrap;
+        width: 742px;
+      }
+
+      .sec_6 .best_box .pr_box:hover {
+        cursor: pointer;
+      }
+
+      .sec_6 .pr_box .pr {
+        width: 336px;
+        height: 465px;
+        background-color: #f9f9f9;
+        border: 5px solid #edf0f3;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .sec_6 .pr_box .pr .best {
+        position: absolute;
+        width: 39px;
+        height: 17px;
+        background-color: rgba(232, 95, 11, 0.53);
+        color: #efeadd;
+        text-align: center;
+        line-height: 17px;
+        font-size: 11px;
+        border-radius: 2px;
+        top: 15px;
+        left: 10px;
+      }
+
+      .sec_6 .best_box .pr_box .pr:nth-child(2n-1) {
+        margin-right: 70px;
+      }
+
+      .sec_6 .best_box .pr_box .pr:nth-child(1),
+      .sec_6 .best_box .pr_box .pr:nth-child(2) {
+        margin-bottom: 104px;
+      }
+
+      .sec_6 .pr_box .img_box {
+        width: 100%;
+        height: 355px;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 베스트 / 올 박스에서 이미지박스 */
+
+      .sec_6 .pr_box .pr .img_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sec_6 .pr_box .pr .img_box > img {
+        width: 250px;
+        height: 187px;
+        margin-top: 20px;
+        transition: transform 0.3s;
+      }
+
+      .sec_6 .pr_box .pr .img_box:hover > img {
+        transform: scale(1.1);
+      }
+
+      /* hair - img */
+
+      .sec_6 .pr_box_1 .pr .img_box > img {
+        width: 190px;
+        height: 350px;
+      }
+
+      /* skinbody - img */
+      .sec_6 .pr_box_2 .pr .img_box > img {
+        width: 150px;
+        height: 350px;
+      }
+
+      .sec_6 .pr_box_2 .pr_3 .img_box > img {
+        width: 200px;
+        height: 200px;
+        margin-top: 120px;
+      }
+
+      .sec_6 .pr_box_2 .pr_4 .img_box > img {
+        width: 170px;
+        height: 354px;
+      }
+
+      /* laundry - img */
+
+      .sec_6 .pr_box_3 .pr .img_box > img {
+        width: 166px;
+        height: 320px;
+      }
+
+      /* soap - img */
+
+      .sec_6 .pr_box_4 .pr .img_box > img {
+        width: 280px;
+        height: 198px;
+      }
+
+      /* air refreshener - img */
+
+      .sec_6 .pr_box_5 .pr .img_box > img {
+        width: 320px;
+        height: 320px;
+      }
+
+      /* refill - img */
+
+      .sec_6 .pr_box_6 .pr .img_box > img {
+        width: 238px;
+        height: 300px;
+      }
+
+      /* pr-box 그림자 */
+      .pr_box .pr {
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+      }
+
+      /* img 그림자 */
+
+      /* 베스트 / 올 박스에서 텍스트박스 */
+
+      .sec_6 .pr_box .pr_txt {
+        width: 100%;
+        height: 102px;
+        margin: 0;
+        padding: 0;
+        background-color: #edf0f3;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .sec_6 .pr_box .pr_txt p {
+        font-size: 14px;
+        color: #e85f0b;
+        padding: 10px 0 0 10px;
+      }
+
+      .sec_6 .pr_box .pr_txt .pr_name_box {
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        gap: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+
+      .sec_6 .pr_box .pr_txt .pr_name_box > p:first-child {
+        font-size: 14px;
+        color: #7e7e7e;
+        font-family: "Abhaya Libre", serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 0;
+      }
+
+      .sec_6 .pr_box .pr_txt .pr_name_box > p:last-child {
+        font-family: pretendard, sans-serif;
+        color: #000;
+        font-size: 16px;
+        padding: 0;
+      }
+
+      .sec_6 .pr_box .pr_txt .pr_name_box > p:hover {
+        text-decoration: underline;
+      }
+
+      .sec_6 .pr_box .pr_txt .pr_price {
+        color: #7e7e7e;
+        text-align: right;
+        padding-right: 10px;
+      }
+
+      .sec_6 .pr_box .pr_txt .line {
+        width: 304px;
+        height: 1px;
+        background-color: #d4cec7;
+        margin-top: 4px;
+      }
+
+      /* 베스트 박스에서 텍스트 박스 */
+      .sec_6 .best_box {
+      }
+
+      .sec_6 .best_box .txt_box {
+        color: #656566;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: -12px;
+      }
+
+      .sec_6 .best_box .txt_box .top_txt h3 {
+        font-size: 60px;
+        font-family: "Abhaya Libre", serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: -1px;
+        line-height: 1.1;
+      }
+
+      .sec_6 .best_box .txt_box .top_txt p {
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 20px;
+        /* border: solid 1px blue; */
+      }
+
+      /* 텍스트 박스에서 탭 박스 */
+
+      .sec_6 .best_box .txt_box .tab_box {
+        width: 522px;
+        margin-top: 50px;
+      }
+
+      .sec_6 .best_box .txt_box .tab_list {
+        font-family: "Pretendard Variable", Pretendard, sans-serif;
+        font-size: 25px;
+        font-weight: 300;
+        background-color: #e2ebf4;
+        display: inline-block;
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+        padding: 5px 20px;
+        margin: 10px 8px;
+      }
+
+      .sec_6 .best_box .txt_box .tab_list.active {
+        background-color: #bed8f1;
+        font-weight: 500;
+      }
+
+      .sec_6 .best_box .txt_box .tab_list:hover {
+        background-color: #bed8f1;
+        font-weight: 500;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: flex; /* pr_box는 flex, btm_txt는 block 등 상황에 맞게 */
+      }
+
+      .btm_txt.active {
+        display: block;
+      }
+
+      /* 텍스트 박스에서 아래 글씨 */
+
+      .sec_6 .best_box .txt_box .btm_txt p {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.25%;
+        font-weight: 500;
+        margin-top: 50px;
+      }
+
+      .sec_6 .more {
+        margin-top: 65px;
+      }
+
+      /* 올 박스 시작  */
+
+      .all_box {
+        margin-top: 150px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .all_box .all {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 150px 0 60px 0;
+      }
+
+      .all_box .all .txt {
+        font-family: "SandollSamlipHobbangBasic";
+        font-size: 40px;
+        color: #656566;
+        margin: 0;
+        padding: 0;
+      }
+
+      .all_box .pr_box {
+        gap: 70px;
+        justify-content: space-between;
+      }
+
+      .sec_6 .all_box .pr_box .pr .img_box > img {
+        width: 160px;
+        height: 320px;
+      }
+
+      /* 화살표 */
+      .sec_6 .arrow {
+        font-weight: 200;
+        font-size: 20px;
+        padding: 20px;
+        border: 0.5px solid black;
+        border-radius: 100px;
+        width: 170px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: width 0.3s, background-color 0.3s, border 0.3s;
+        position: relative;
+        z-index: 10;
+      }
+
+      .sec_6 .arrow:hover {
+        width: 190px;
+        background-color: rgba(100, 100, 100, 0.3);
+        border: 0.5px solid rgba(100, 100, 100, 0.7);
+      }
+
+      .sec_6 .arrow .arrow_line {
+        width: 20px;
+        height: 1px;
+        background-color: #656566;
+        position: relative;
+        transition: width 0.3s;
+      }
+
+      .sec_6 .arrow:hover .arrow_line {
+        width: 40px;
+      }
+
+      .sec_6 .arrow .arrow_line::after {
+        position: absolute;
+        right: 0;
+        top: -4px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid #656566;
+        border-right: 1px solid #656566;
+        transform: rotate(45deg);
+      }
+
+      /* 섹션6 끝 */
+
+      /* 섹션7 시작 */
+
+      .sec_7 {
+        font-family: "Pretendard";
+        width: 100%;
+        /* height: 1470px; */
+        background: url(/Greendays_main_imgs/sec_7_BG.png) no-repeat center /
+          cover;
+        position: relative;
+      }
+
+      /* 텍스트 박스(왼쪽) */
+
+      .sec_7 .con {
+        display: flex;
+        justify-content: space-between;
+        padding: 140px 0;
+        width: 1560px;
+      }
+
+      .sec_7 .con .txt_box {
+        color: #656566;
+      }
+
+      .sec_7 .txt_box h2 {
+        font-family: "Abhaya Libre", serif;
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      .sec_7 .txt_box h3 {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 40px 0;
+      }
+
+      .sec_7 .txt_box p {
+        font-size: 20px;
+        margin-bottom: 70px;
+      }
+
+      .sec_7 .txt_box a {
+        font-weight: 200;
+        font-size: 20px;
+        padding: 20px;
+        border: 0.5px solid black;
+        border-radius: 100px;
+        width: 170px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: width 0.3s, background-color 0.3s, border 0.3s;
+      }
+
+      .sec_7 .txt_box a:hover {
+        width: 190px;
+        background-color: rgba(100, 100, 100, 0.3);
+        border: 0.5px solid rgba(100, 100, 100, 0.7);
+      }
+
+      .sec_7 .txt_box a .arrow_line {
+        width: 20px;
+        height: 1px;
+        background-color: #656566;
+        position: relative;
+        transition: width 0.3s;
+      }
+
+      .sec_7 .txt_box a:hover .arrow_line {
+        width: 40px;
+      }
+
+      .sec_7 .txt_box a .arrow_line::after {
+        position: absolute;
+        right: 0;
+        top: -4px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid #656566;
+        border-right: 1px solid #656566;
+        transform: rotate(45deg);
+      }
+
+      /* 리뷰 이미지 박스(오른쪽) */
+
+      .sec_7 .review_box {
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+      }
+
+      .sec_7 .review_box .review_wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .sec_7 .review_box .review_wrap .review {
+        position: relative;
+        width: 412px;
+        height: 526px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .sec_7 .review_box .review_wrap .review::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: inherit;
+        transition: transform 0.3s;
+        z-index: 0;
+      }
+
+      .sec_7 .review_box .review_wrap .review_1::before {
+        background-image: url(/Greendays_main_imgs/sec_7_review-1.png);
+      }
+
+      .sec_7 .review_box .review_wrap .review_2::before {
+        background-image: url(/Greendays_main_imgs/sec_7_review-2.png);
+      }
+
+      .sec_7 .review_box .review_wrap .review_3::before {
+        background-image: url(/Greendays_main_imgs/sec_7_review-3.png);
+      }
+
+      .sec_7 .review_box .review_wrap .review_4::before {
+        background-image: url(/Greendays_main_imgs/sec_7_review-4.png);
+      }
+
+      .sec_7 .review_box .review_wrap .review:hover::before {
+        transform: scale(1.08);
+      }
+      .sec_7 .review_box .review_wrap .review .review_txt_box {
+        margin-top: 65px;
+        margin-left: 45px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .sec_7 .review_box .review_wrap .review .review_txt_box h3 {
+        font-family: "Sweet";
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .sec_7 .review_box .review_wrap .review .review_txt_box p {
+        font-family: "GyeonggiMillenniumTitle";
+        margin: 25px 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: -1px;
+      }
+
+      .sec_7 .review_box .review_wrap .review .review_txt_box .personal_box {
+        color: #bab6b6;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .sec_7 .review_box .review .review_txt_box .personal_box .name {
+        font-size: 16px;
+      }
+
+      .sec_7 .review_box .review .review_txt_box .personal_box .img_box {
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        margin-left: 6px;
+        margin-right: 18px;
+      }
+
+      .sec_7 .review_box .review_1 .review_txt_box .personal_box .img_box {
+        background: url(/Greendays_main_imgs/sec_7_profile_1.png);
+      }
+
+      .sec_7 .review_box .review_2 .review_txt_box .personal_box .img_box {
+        background: url(/Greendays_main_imgs/sec_7_profile_2.png);
+      }
+
+      .sec_7 .review_box .review_3 .review_txt_box .personal_box .img_box {
+        background: url(/Greendays_main_imgs/sec_7_profile_3.png);
+      }
+
+      .sec_7 .review_box .review_4 .review_txt_box .personal_box .img_box {
+        background: url(/Greendays_main_imgs/sec_7_profile_4.png);
+      }
+
+      .sec_7 .review_box .review .review_txt_box .personal_box .date {
+        font-size: 12px;
+      }
+
+      .sec_7 .review_box .review a {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 20px;
+        font-weight: 200;
+        background-color: rgba(217, 217, 217, 0.25);
+        padding: 15px 20px;
+        border: solid 0.5px rgba(255, 255, 255, 0.8);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s, opacity 0.3s;
+      }
+
+      .sec_7 .review_box .review:hover a {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .sec_7 .review_box .review a > .arrow_line {
+        width: 20px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        transition: width 0.3s;
+      }
+
+      .sec_7 .review_box .review a:hover > .arrow_line {
+        width: 40px;
+      }
+
+      .sec_7 .review_box .review a > .arrow_line::after {
+        position: absolute;
+        right: 0;
+        top: -4px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+        transform: rotate(45deg);
+      }
+
+      .sec_7 .ele {
+        position: absolute;
+        width: 550px;
+        left: -20px;
+        bottom: 100px;
+      }
+
+      /* 섹션7 끝 */
+
+      /* 섹션8 시작 */
+
+      /* Layout */
+      .sec_8 {
+        background: url(/Greendays_main_imgs/sec_7_BG.png) no-repeat center /
+          cover;
+        background-size: 110%;
+      }
+
+      .panels {
+        width: 100%;
+        height: 950px;
+        overflow: hidden;
+        border-radius: 150px;
+      }
+
+      .panels__container {
+        /* border: solid 10px red; */
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        height: 100%;
+        width: 120%;
+        margin: 0 -10%;
+        visibility: hidden;
+      }
+
+      .panel {
+        display: inline-block;
+        height: 100%;
+        visibility: visible;
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+        cursor: pointer;
+        text-decoration: none;
+        transform: translate3d(0, 0, 0);
+        transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+
+      .panel_1 {
+        background: url(/Greendays_main_imgs/sec_8_forest.png);
+      }
+
+      .panel_2 {
+        background: url(/Greendays_main_imgs/sec_8_sign.png);
+      }
+
+      .panel__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: center center no-repeat;
+        background-size: cover;
+        transform: translateX(10%);
+        transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+        position: relative;
+      }
+
+      .panel:last-child .panel__content {
+        transform: translateX(-10%);
+      }
+
+      .panel__content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.5;
+        transition: opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+
+      /* Title */
+      .panel__title {
+        color: #fff;
+        z-index: 1;
+        transition: color 1s cubic-bezier(0.6, 0, 0.2, 1);
+        font-family: "Pretendard";
+        font-weight: bold;
+        font-size: 48px;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .panel__title_1 {
+        margin-left: 200px;
+        margin-right: auto;
+      }
+
+      .panel__title_2 {
+        margin-left: auto;
+        margin-right: 200px;
+      }
+
+      .panel__title .arrow_line {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+        transition: width 1s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+
+      .panel__title .arrow_line::before {
+        position: absolute;
+        left: 0;
+        top: -4.5px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(-135deg);
+      }
+
+      .panel__title_2 .arrow_line::before {
+        transform: rotate(45deg);
+        right: 0;
+        left: auto;
+      }
+
+      .panel:hover .panel__title .arrow_line {
+        width: 100px;
+      }
+
+      /* Hover States */
+      .panels:hover .panel {
+        transform: translate3d(-10%, 0, 0);
+      }
+
+      .panels:hover .panel .panel__content {
+        transform: translateX(14%);
+      }
+
+      .panels:hover .panel .panel__content::before {
+        opacity: 0.7;
+      }
+
+      .panels .panel:hover ~ .panel {
+        transform: translate3d(10%, 0, 0);
+      }
+
+      .panels .panel:hover ~ .panel .panel__content {
+        transform: translateX(-14%);
+      }
+
+      /* Active panel */
+      .panels .panel:hover {
+        z-index: 2;
+        transform: translate3d(10%, 0, 0);
+        pointer-events: auto;
+      }
+
+      .panels .panel:hover:last-child {
+        transform: translate3d(-10%, 0, 0);
+      }
+
+      .panels .panel:hover .panel__content {
+        transform: translateX(0%);
+      }
+
+      .panels .panel:hover .panel__content::before {
+        opacity: 0;
+      }
+
+      .panels .panel:hover .panel__title::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Vertical layout */
+      .panels--stacked .panels__container {
+        width: 100%;
+        height: 120%;
+        margin: -10% 0;
+        flex-direction: column;
+      }
+
+      .panels--stacked .panel {
+        height: 50%;
+        width: 100%;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .panels--stacked .panel .panel__content {
+        transform: translate3d(0, 10%, 0);
+      }
+
+      .panels--stacked .panel:last-child .panel__content {
+        transform: translate3d(0, -10%, 0);
+      }
+
+      .panels--stacked:hover .panel {
+        transform: translate3d(0, -10%, 0);
+      }
+
+      .panels--stacked:hover .panel .panel__content {
+        transform: translate3d(0, 14%, 0);
+      }
+
+      .panels--stacked .panel:hover ~ .panel {
+        transform: translate3d(0, 10%, 0);
+      }
+
+      .panels--stacked .panel:hover ~ .panel .panel__content {
+        transform: translate3d(0, -14%, 0);
+      }
+
+      .panels--stacked .panel:hover {
+        transform: translate3d(0, 10%, 0);
+      }
+
+      .panels--stacked .panel:hover:last-child {
+        transform: translate3d(0, -10%, 0);
+      }
+
+      .panels--stacked .panel:hover .panel__content {
+        transform: translate3d(0, 0, 0);
+      }
+
+      /* 섹션8 끝 */
+
+      /* 섹션9 시작 */
+
+      .sec_9 {
+        font-family: "Pretendard";
+        position: relative;
+        width: 100%;
+        height: 950px;
+        background: url(/Greendays_main_imgs/sec_9_BG.png) no-repeat center /
+          cover;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      .sec_9 .ele {
+        position: absolute;
+        top: 392px;
+        left: 120px;
+        width: 150px;
+        /* border : solid 5px white; */
+      }
+
+      /* 섹션9-텍스트 박스 */
+
+      .sec_9 .sns_txt_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+        width: 450px;
+        margin-left: 170px;
+      }
+
+      .sec_9 .sns_txt_box .icon_box {
+        margin-top: 250px;
+        width: 63px;
+        height: 63px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .sec_9 .sns_txt_box .icon_box img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .sec_9 .sns_txt_box .txt_box {
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .sec_9 .sns_txt_box .divider {
+        width: 1px;
+        height: 65px;
+        background-color: #fff;
+      }
+
+      .sec_9 .sns_txt_box .insta_id {
+        font-size: 35px;
+      }
+
+      /* 섹션9-이미지 박스 */
+
+      .sec_9 .sns_img_box {
+        width: 1400px;
+        height: 450px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 750px;
+      }
+
+      .sec_9 .sns_img_box .swiper-slide {
+        width: 450px;
+        height: 450px;
+        border-radius: 20px;
+      }
+
+      /* 섹션9 끝 */
+
+      /* 푸터 시작 */
+      footer {
+        width: 100%;
+        height: 732px;
+        background-color: #fff;
+        color: #1a5b47;
+        font-family: "Pretendard";
+        font-weight: 400;
+        position: relative;
+        transition: background-color 0.8s ease, scale 0.8s 3s ease;
+        padding-top: 60px;
+        overflow: hidden;
+      }
+
+      /* 푸터 active */
+      footer.active {
+        background-color: #efebe2;
+        transition-delay: 0.5s;
+      }
+
+      /* footer .con {
+        height: auto;
+        overflow: hidden;
+      } */
+
+      /* 푸터-메인 */
+
+      /* 푸터-메인-CC */
+
+      footer .main_box {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      footer .main_box .CC_box,
+      footer .menu_box {
+        display: inline-block;
+      }
+
+      footer .main_box .CC_box p {
+        margin: 0 0 5px 0;
+        padding: 0;
+      }
+
+      footer .main_box .CC_box p:first-child {
+        font-size: 25px;
+      }
+
+      footer .main_box .CC_box p:nth-child(2) {
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      footer .main_box .CC_box p:last-child {
+        font-size: 15px;
+      }
+
+      /* 푸터-메인-1차메뉴 */
+
+      footer .main_box .menu_box {
+        padding-right: 0;
+        position: relative;
+        letter-spacing: -2.5%;
+      }
+
+      footer .main_box .menu_box .line {
+        width: 765px;
+        height: 1px;
+        background-color: #afc0b4;
+        position: absolute;
+        top: 40px;
+      }
+
+      footer .main_box .menu_box ul {
+        display: flex;
+      }
+
+      footer .main_box .menu_box ul li a {
+        font-size: 24px;
+        font-weight: 700;
+        padding-right: 90px;
+      }
+
+      footer .main_box .menu_box ul li:last-child a {
+        padding-right: 70px;
+      }
+
+      /* 푸터-메인-2차메뉴 */
+
+      footer .main_box .menu_box ul ul {
+        display: block;
+        margin-top: 10px;
+      }
+
+      footer .main_box .menu_box ul ul li a {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 55px;
+      }
+
+      footer .main_box .menu_box .line,
+      footer .main_box .menu_box ul ul {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.8s, visibility 0.8s ease;
+        transition-delay: 0s;
+      }
+
+      /* 2초 뒤 2차메뉴 등장 */
+      footer.active .main_box .menu_box .line,
+      footer.active .main_box .menu_box ul ul {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 1.5s;
+      }
+
+      /* 푸터-로고 */
+
+      footer .logo_box {
+        margin-top: 10px;
+        font-family: "Baloo 2", sans-serif;
+        padding: 0;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      footer .logo_box h3 {
+        font-size: 300px;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 푸터-이미지 */
+
+      footer .img_box {
+        position: absolute;
+        top: 285px;
+        left: 54px;
+      }
+
+      /* 이미지 초기 상태 */
+      footer .img_box img {
+        width: 141px;
+        transform: translate(0, 0) scale(1);
+        transition: transform 0.8s ease;
+        transition-delay: 0s;
+      }
+
+      /* 1초 뒤 이미지 확장 */
+      footer.active .img_box img {
+        transform: translate(180px, 230px) scale(5.5);
+        transition-delay: 1s;
+      }
+
+      /* 푸터 끝 */
+    </style>
+
+    <script>
+      // 헤더 스크롤 설정 시작
+
+      const header = document.getElementById("header");
+
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+      let isHidden = false;
+
+      function onScroll() {
+        const currentScrollY = window.scrollY;
+
+        if (Math.abs(currentScrollY - lastScrollY) < 5) {
+          // 너무 미세한 움직임은 무시
+          ticking = false;
+          return;
+        }
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          // 아래로 스크롤 + 일정 이상 내려갔을 때
+          if (!isHidden) {
+            header.style.transform = "translateY(-100%)";
+            isHidden = true;
+          }
+        } else {
+          // 위로 스크롤
+          if (isHidden) {
+            header.style.transform = "translateY(0)";
+            isHidden = false;
+          }
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      });
+
+      // 헤더 스크롤 설정 끝
+
+      // 섹션1-스와이퍼 시작
+
+      var swiper1 = new Swiper(".mySwiper_1", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+      });
+
+      // 섹션1-스와이퍼 끝
+
+      // 섹션2-풀페이지 시작
+
+      // 섹션2-풀페이지 끝
+
+      // 섹션4-발견되면 활성화시키는 라이브러리 시작
+      function ActiveOnVisible__init() {
+        $(".active-on-visible").each(function (index, node) {
+          var $node = $(node);
+
+          var onFuncName = $node.attr("data-active-on-visible-on-func-name");
+          var offFuncName = $node.attr("data-active-on-visible-off-func-name");
+
+          $node.data("data-active-on-visible-on-func-name", onFuncName);
+          $node.data("data-active-on-visible-off-func-name", offFuncName);
+        });
+
+        $(window).resize(_.debounce(ActiveOnVisible__initOffset, 500));
+        ActiveOnVisible__initOffset();
+
+        $(window).scroll(_.debounce(ActiveOnVisible__checkAndActive, 50));
+        ActiveOnVisible__checkAndActive();
+      }
+
+      function ActiveOnVisible__initOffset() {
+        var windowHeight = $(window).height();
+
+        $(".active-on-visible:not(.actived)").each(function (index, node) {
+          var $node = $(node);
+
+          var offsetTop = $node.offset().top;
+
+          var matrix = $node
+            .css("transform")
+            .replace(/[^0-9\-.,]/g, "")
+            .split(",");
+          var translateX = matrix[12] || matrix[4];
+          var translateY = matrix[13] || matrix[5];
+
+          if (translateY) {
+            offsetTop -= translateY;
+          }
+
+          $node.attr("data-active-on-visible-offsetTop", offsetTop);
+          $node.data("data-active-on-visible-offsetTop", offsetTop);
+
+          if (!$node.attr("data-active-on-visible-diff-y")) {
+            $node.attr("data-active-on-visible-diff-y", "0");
+          }
+
+          if (!$node.attr("data-active-on-visible-delay")) {
+            $node.attr("data-active-on-visible-delay", "0");
+          }
+
+          var diffY = $node.attr("data-active-on-visible-diff-y");
+          var delay = $node.attr("data-active-on-visible-delay");
+
+          if (diffY.substr(-2, 2) == "vh") {
+            diffY = parseInt(diffY);
+
+            diffY = windowHeight * (diffY / 100);
+          } else if (diffY.substr(-1, 1) == "%") {
+            diffY = parseInt(diffY);
+
+            diffY = $node.height() * (diffY / 100);
+          } else {
+            diffY = parseInt(diffY);
+          }
+
+          $node.attr("data-active-on-visible-diff-y-real", diffY);
+          $node.data("data-active-on-visible-diff-y", diffY);
+          $node.data("data-active-on-visible-delay", delay);
+        });
+
+        ActiveOnVisible__checkAndActive();
+      }
+
+      function ActiveOnVisible__checkAndActive() {
+        $(".active-on-visible:not(.actived)").each(function (index, node) {
+          var $node = $(node);
+
+          var offsetTop = $node.data("data-active-on-visible-offsetTop") * 1;
+          var diffY = parseInt($node.data("data-active-on-visible-diff-y"));
+          var delay = parseInt($node.data("data-active-on-visible-delay"));
+
+          var onFuncName = $node.data("data-active-on-visible-on-func-name");
+          var offFuncName = $node.data("data-active-on-visible-off-func-name");
+
+          var scrollTop = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          var nodeHeight = $node.height();
+
+          if (scrollTop + windowHeight + diffY > offsetTop) {
+            setTimeout(function () {
+              if ($node.hasClass("active") == false) {
+                $node.addClass("active");
+
+                if ($node.hasClass("can-active-once")) {
+                  $node.addClass("actived");
+                }
+
+                if (window[onFuncName]) {
+                  window[onFuncName]($node);
+                }
+              }
+            }, delay);
+          } else {
+            if ($node.hasClass("active")) {
+              $node.removeClass("active");
+
+              if (window[offFuncName]) {
+                window[offFuncName]($node);
+              }
+            }
+          }
+        });
+      }
+
+      $(function () {
+        ActiveOnVisible__init();
+      });
+      // 섹션4-발견되면 활성화시키는 라이브러리 끝
+
+      // 섹션6-탭메뉴 시작
+
+      const tabs = document.querySelectorAll(".tab_list");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          const target = tab.dataset.tab;
+          contents.forEach((c) => c.classList.remove("active"));
+
+          document.getElementById(target).classList.add("active");
+          document.getElementById(`${target}-txt`).classList.add("active");
+        });
+      });
+
+      // 섹션6-탭메뉴 끝
+
+      // 섹션9-스와이퍼 시작
+
+      var swiper9 = new Swiper(".mySwiper_9", {
+        slidesPerView: "auto",
+        spaceBetween: 28,
+        loop: true,
+      });
+
+      // 섹션9-스와이퍼 끝
+
+      // 푸터 시작
+
+      $(window).on("scroll", function () {
+        const footer = $("footer");
+        const scrollY = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const footerTop = footer.offset().top;
+
+        if (scrollY + windowHeight >= footerTop + 100) {
+          footer.addClass("active");
+        } else {
+          footer.removeClass("active");
+        }
+      });
+
+      // 푸터 끝
+    </script>
+  </body>
+</html>
